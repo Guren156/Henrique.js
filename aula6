@@ -1,0 +1,31 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});
+
+const posts = [
+  { id: 1, title: 'Primeiro Post', content: 'Conteúdo do primeiro post', author: 'Autor 1' },
+  { id: 2, title: 'Segundo Post', content: 'Conteúdo do segundo post', author: 'Autor 2' },
+  { id: 3, title: 'Terceiro Post', content: 'Conteúdo do terceiro post', author: 1  'Autor 1' },
+];
+
+app.get('/blog', (req, res) => {
+  const postsList = posts.map(post => ({ id: post.id, title: post.title }));
+  res.json(postsList);
+});
+
+app.get('/blog/:id', (req, res) => {
+  const postId = parseInt(req.params.id);
+  const post = posts.find(post => post.id === postId);
+
+  if (!post) {
+    return res.status(404).json({ message: 'Post não encontrado' });
+  }
+
+  res.json(post);
+});
+
