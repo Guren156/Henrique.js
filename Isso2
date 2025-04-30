@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica (Sem Tabela)</title>
+    <style>
+        /* Estilos CSS para a tabela e elementos */
+        .periodic-container {
+            display: grid;
+            grid-template-columns: repeat(18, 50px);
+            grid-template-rows: repeat(8, 60px); /* Aumentei a altura para acomodar número e massa */
+            gap: 2px;
+            margin: 20px auto;
+            width: 950px;
+        }
+
+        .periodic-element {
+            border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column; /* Organiza número, símbolo e massa verticalmente */
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .atomic-number {
+            font-size: 0.7em;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+        }
+
+        .symbol {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .atomic-mass {
+            font-size: 0.7em;
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+        }
+
+        /* Estilos específicos para categorias */
+        .alcalino { background-color: #f0adad; }
+        .alcalino-terroso { background-color: #f4d03f; }
+        .transicao { background-color: #aad1f0; }
+        .halogenio { background-color: #a0f0a0; }
+        .gas-nobre { background-color: #e0e0e0; }
+        .metal-pobre { background-color: #c0c0c0; }
+        .nao-metal { background-color: #f8f8f8; }
+        .lantanideo { border: 2px solid red; }
+        .actinideo { border: 2px solid blue; }
+
+        /* Estilos para elementos específicos */
+        #H { background-color: #ffffff; }
+        #C { background-color: #98ff98; }
+        /* ... */
+
+        /* Estilo para espaços vazios */
+        .space {
+            background-color: transparent;
+            border: none;
+        }
+
+        /* Estilo para hover */
+        .periodic-element:hover {
+            background-color: #ffff99;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tabela Periódica (Sem Elementos de Tabela)</h1>
+
+    <div class="periodic-container">
+        <div id="H" class="periodic-element nao-metal">
+            <span class="atomic-number">1</span>
+            <span class="symbol">H</span>
+            <span class="atomic-mass">1.008</span>
+        </div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space" colspan="16"></div>
+        <div class="periodic-element gas-nobre">
+            <span class="atomic-number">2</span>
+            <span class="symbol">He</span>
+            <span class="atomic-mass">4.0026</span>
+        </div>
+
+        <div class="periodic-element alcalino">
+            <span class="atomic-number">3</span>
+            <span class="symbol">Li</span>
+            <span class="atomic-mass">6.94</span>
+        </div>
+        <div class="periodic-element alcalino-terroso">
+            <span class="atomic-number">4</span>
+            <span class="symbol">Be</span>
+            <span class="atomic-mass">9.0122</span>
+        </div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element metal-pobre">
+            <span class="atomic-number">5</span>
+            <span class="symbol">B</span>
+            <span class="atomic-mass">10.81</span>
+        </div>
+        <div class="periodic-element nao-metal">
+            <span class="atomic-number">6</span>
+            <span class="symbol">C</span>
+            <span class="atomic-mass">12.011</span>
+        </div>
+        <div class="periodic-element nao-metal">
+            <span class="atomic-number">7</span>
+            <span class="symbol">N</span>
+            <span class="atomic-mass">14.007</span>
+        </div>
+        <div class="periodic-element nao-metal">
+            <span class="atomic-number">8</span>
+            <span class="symbol">O</span>
+            <span class="atomic-mass">15.999</span>
+        </div>
+        <div class="periodic-element halogenio">
+            <span class="atomic-number">9</span>
+            <span class="symbol">F</span>
+            <span class="atomic-mass">18.998</span>
+        </div>
+        <div class="periodic-element gas-nobre">
+            <span class="atomic-number">10</span>
+            <span class="symbol">Ne</span>
+            <span class="atomic-mass">20.180</span>
+        </div>
+
+        </div>
+
+    <p>Fonte: Dados fictícios. Cores e organização simplificadas para exemplo.</p>
+
+</body>
+
+</html>
