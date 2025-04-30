@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica (Sem Tabela)</title>
+    <style>
+        /* Estilos CSS para a tabela e elementos */
+        .periodic-container {
+            display: grid;
+            grid-template-columns: repeat(18, 50px); /* 18 colunas */
+            grid-template-rows: repeat(8, 50px);    /* 8 linhas */
+            gap: 2px;
+            margin: 20px auto;
+            width: 950px;
+        }
+
+        .periodic-element {
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* Estilos específicos para categorias (exemplo) */
+        .alcalino {
+            background-color: #f0adad;
+        }
+
+        .alcalino-terroso {
+            background-color: #f4d03f;
+        }
+
+        .transicao {
+            background-color: #aad1f0;
+        }
+
+        .halogenio {
+            background-color: #a0f0a0;
+        }
+
+        .gas-nobre {
+            background-color: #e0e0e0;
+        }
+
+        /* ... mais estilos para outras categorias */
+
+        /* Exemplo de estilo com seletor de atributo (usando data-category in HTML) */
+        [data-category="lantanideo"] {
+            border: 2px solid red;
+        }
+
+        /* Ids para elementos específicos (se necessário) */
+        #H {
+            background-color: #ffffff;
+        }
+
+        #C {
+            background-color: #98ff98;
+        }
+
+        /* ... */
+
+        /* Estilo usando pseudo-classe (exemplo:hover) */
+        .periodic-element:hover {
+            background-color: #ffff99;
+        }
+
+        .space {
+            background-color: transparent;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tabela Periódica (Sem Elementos de Tabela)</h1>
+
+    <div class="periodic-container">
+        <div id="H" class="periodic-element nao-metal">H</div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space" colspan="16"></div>
+        <div class="periodic-element gas-nobre">He</div>
+
+        <div class="periodic-element alcalino">Li</div>
+        <div class="periodic-element alcalino-terroso">Be</div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element metal-pobre">B</div>
+        <div class="periodic-element nao-metal">C</div>
+        <div class="periodic-element nao-metal">N</div>
+        <div class="periodic-element nao-metal">O</div>
+        <div class="periodic-element halogenio">F</div>
+        <div class="periodic-element gas-nobre">Ne</div>
+
+        <div class="periodic-element alcalino">Na</div>
+        <div class="periodic-element alcalino-terroso">Mg</div>
+         <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element space"></div>
+        <div class="periodic-element metal-pobre">Al</div>
+        <div class="periodic-element metal-pobre">Si</div>
+        <div class="periodic-element nao-metal">P</div>
+        <div class="periodic-element nao-metal">S</div>
+        <div class="periodic-element halogenio">Cl</div>
+        <div class="periodic-element gas-nobre">Ar</div>
+
+        <div class="periodic-element alcalino">K</div>
+        <div class="periodic-element alcalino-terroso">Ca</div>
+        <div class="periodic-element transicao">Sc</div>
+        <div class="periodic-element transicao">Ti</div>
+        <div class="periodic-element transicao">V</div>
+        <div class="periodic-element transicao">Cr</div>
+        <div class="periodic-element transicao">Mn</div>
+        <div class="periodic-element transicao">Fe</div>
+        <div class="periodic-element transicao">Co</div>
+        <div class="periodic-element transicao">Ni</div>
+        <div class="periodic-element transicao">Cu</div>
+        <div class="periodic-element transicao">Zn</div>
+        <div class="periodic-element metal-pobre">Ga</div>
+        <div class="periodic-element metal-pobre">Ge</div>
+        <div class="periodic-element metal-pobre">As</div>
+        <div class="periodic-element nao-metal">Se</div>
+        <div class="periodic-element halogenio">Br</div>
+        <div class="periodic-element gas-nobre">Kr</div>
+
+        <div class="periodic-element alcalino">Rb</div>
+        <div class="periodic-element alcalino-terroso">Sr</div>
+        <div class="periodic-element transicao">Y</div>
+        <div class="periodic-element transicao">Zr</div>
+        <div class="periodic-element transicao">Nb</div>
+        <div class="periodic-element transicao">Mo</div>
+        <div class="periodic-element transicao">Tc</div>
+        <div class="periodic-element transicao">Ru</div>
+        <div class="periodic-element transicao">Rh</div>
+        <div class="periodic-element transicao">Pd</div>
+        <div class="periodic-element transicao">Ag</div>
+        <div class="periodic-element transicao">Cd</div>
+        <div class="periodic-element metal-pobre">In</div>
+        <div class="periodic-element metal-pobre">Sn</div>
+        <div class="periodic-element metal-pobre">Sb</div>
+        <div class="periodic-element metal-pobre">Te</div>
+        <div class="periodic-element halogenio">I</div>
+        <div class="periodic-element gas-nobre">Xe</div>
+
+        <div class="periodic-element alcalino">Cs</div>
+        <div class="periodic-element alcalino-terroso">Ba</div>
+        <div class="periodic-element transicao">La</div>
+        <div class="periodic-element transicao">Hf</div>
+        <div class="periodic-element transicao">Ta</div>
+        <div class="periodic-element transicao">W</div>
+        <div class="periodic-element transicao">Re</div>
+        <div class="periodic-element transicao">Os</div>
+        <div class="periodic-element transicao">Ir</div>
+        <div class="periodic-element transicao">Pt</div>
+        <div class="periodic-element transicao">Au</div>
+        <div class="periodic-element transicao">Hg</div>
+        <div class="periodic-element metal-pobre">Tl</div>
+        <div class="periodic-element metal-pobre">Pb</div>
+        <div class="periodic-element metal-pobre">Bi</div>
+        <div class="periodic-element metal-pobre">Po</div>
+        <div class="periodic-element halogenio">At</div>
+        <div class="periodic-element gas-nobre">Rn</div>
+
+        <div class="periodic-element alcalino">Fr</div>
+        <div class="periodic-element alcalino-terroso">Ra</div>
+        <div class="periodic-element transicao">Ac</div>
+        <div class="periodic-element transicao">Rf</div>
+        <div class="periodic-element transicao">Db</div>
+        <div class="periodic-element transicao">Sg</div>
+        <div class="periodic-element transicao">Bh</div>
+        <div class="periodic-element transicao">Hs</div>
+        <div class="periodic-element transicao">Mt</div>
+        <div class="periodic-element transicao">Ds</div>
+        <div class="periodic-element transicao">Rg</div>
+        <div class="periodic-element transicao">Cn</div>
+        <div class="periodic-element metal-pobre">Nh</div>
+        <div class="periodic-element metal-pobre">Fl</div>
+        <div class="periodic-element metal-pobre">Mc</div>
+        <div class="periodic-element metal-pobre">Lv</div>
+        <div class="periodic-element halogenio">Ts</div>
+        <div class="periodic-element gas-nobre">Og</div>
+
+        <div class="periodic-element space" colspan="18"></div>
+
+        <div class="periodic-element space" colspan="3"></div>
+        <div class="periodic-element" data-category="lantanideo">Ce</div>
+        <div class="periodic-element" data-category="lantanideo">Pr</div>
+        <div class="periodic-element" data-category="lantanideo">Nd</div>
+        <div class="periodic-element" data-category="lantanideo">Pm</div>
+        <div class="periodic-element" data-category="lantanideo">Sm</div>
+        <div class="periodic-element" data-category="lantanideo">Eu</div>
+        <div class="periodic-element" data-category="lantanideo">Gd</div>
+        <div class="periodic-element" data-category="lantanideo">Tb</div>
+        <div class="periodic-element" data-category="lantanideo">Dy</div>
+        <div class="periodic-element" data-category="lantanideo">Ho</div>
+        <div class="periodic-element" data-category="lantanideo">Er</div>
+        <div class="periodic-element" data-category="lantanideo">Tm</div>
+        <div class="periodic-element" data-category="lantanideo">Yb</div>
+        <div class="periodic-element" data-category="lantanideo">Lu</div>
+        <div class="periodic-element space" colspan="2"></div>
+
+        <div class="periodic-element space" colspan="3"></div>
+        <div class="periodic-element" data-category="actinideo">Th</div>
+        <div class="periodic-element" data-category="actinideo">Pa</div>
+        <div class="periodic-element" data-category="actinideo">U</div>
+        <div class="periodic-element" data-category="actinideo">Np</div>
+        <div class="periodic-element" data-category="actinideo">Pu</div>
+        <div class="periodic-element" data-category="actinideo">Am</div>
+        <div class="periodic-element" data-category="actinideo">Cm</div>
+        <div class="periodic-element" data-category="actinideo">Bk</div>
+        <div class="periodic-element" data-category="actinideo">Cf</div>
+        <div class="periodic-element" data-category="actinideo">Es</div>
+        <div class="periodic-element" data-category="actinideo">Fm</div>
+        <div class="periodic-element" data-category="actinideo">Md</div>
+        <div class="periodic-element" data-category="actinideo">No</div>
+        <div class="periodic-element" data-category="actinideo">Lr</div>
+        <div class="periodic-element space" colspan="2"></div>
+
+    </div>
+
+    <p>Fonte: Dados fictícios. Cores e organização simplificadas para exemplo.</p>
+
+</body>
+
+</html>
