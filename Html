@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periódica</title>
+    <style>
+        /* Estilos CSS para a tabela e elementos */
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+            min-width: 40px;
+        }
+        th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #f0f0f0;
+        }
+
+        /* Estilos específicos para categorias (exemplo) */
+        .alcalino { background-color: #f0adad; }
+        .alcalino-terroso { background-color: #f4d03f; }
+        .transicao { background-color: #aad1f0; }
+        .halogenio { background-color: #a0f0a0; }
+        .gas-nobre { background-color: #e0e0e0; }
+        /* ... mais estilos para outras categorias */
+
+        /* Exemplo de estilo com seletor de atributo */
+        [title="lantanideo"] {
+            border: 2px solid red;
+        }
+
+        /* Ids para elementos específicos (se necessário) */
+        #H { background-color: #ffffff; }
+        #C { background-color: #98ff98; }
+        /* ... */
+
+        /* Estilo usando pseudo-classe (exemplo:hover) */
+        td:hover {
+            background-color: #ffff99;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Tabela Periódica</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="H" class="nao-metal" >H</td><td colspan="16"></td><td class="gas-nobre">He</td>
+            </tr>
+            <tr>
+                <td class="alcalino">Li</td><td class="alcalino-terroso">Be</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="metal-pobre">B</td><td class="nao-metal">C</td><td class="nao-metal">N</td><td class="nao-metal">O</td><td class="halogenio">F</td><td class="gas-nobre">Ne</td>
+            </tr>
+            <tr>
+                <td class="alcalino">Na</td><td class="alcalino-terroso">Mg</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="metal-pobre">Al</td><td class="metal-pobre">Si</td><td class="nao-metal">P</td><td class="nao-metal">S</td><td class="halogenio">Cl</td><td class="gas-nobre">Ar</td>
+            </tr>
+            <tr>
+                <td class="alcalino">K</td><td class="alcalino-terroso">Ca</td><td class="transicao">Sc</td><td class="transicao">Ti</td><td class="transicao">V</td><td class="transicao">Cr</td><td class="transicao">Mn</td><td class="transicao">Fe</td><td class="transicao">Co</td><td class="transicao">Ni</td><td class="transicao">Cu</td><td class="transicao">Zn</td><td class="metal-pobre">Ga</td><td class="metal-pobre">Ge</td><td class="metal-pobre">As</td><td class="nao-metal">Se</td><td class="halogenio">Br</td><td class="gas-nobre">Kr</td>
+            </tr>
+            <tr>
+                <td class="alcalino">Rb</td><td class="alcalino-terroso">Sr</td><td class="transicao">Y</td><td class="transicao">Zr</td><td class="transicao">Nb</td><td class="transicao">Mo</td><td class="transicao">Tc</td><td class="transicao">Ru</td><td class="transicao">Rh</td><td class="transicao">Pd</td><td class="transicao">Ag</td><td class="transicao">Cd</td><td class="metal-pobre">In</td><td class="metal-pobre">Sn</td><td class="metal-pobre">Sb</td><td class="metal-pobre">Te</td><td class="halogenio">I</td><td class="gas-nobre">Xe</td>
+            </tr>
+            <tr>
+                <td class="alcalino">Cs</td><td class="alcalino-terroso">Ba</td><td class="transicao">La</td><td class="transicao">Hf</td><td class="transicao">Ta</td><td class="transicao">W</td><td class="transicao">Re</td><td class="transicao">Os</td><td class="transicao">Ir</td><td class="transicao">Pt</td><td class="transicao">Au</td><td class="transicao">Hg</td><td class="metal-pobre">Tl</td><td class="metal-pobre">Pb</td><td class="metal-pobre">Bi</td><td class="metal-pobre">Po</td><td class="halogenio">At</td><td class="gas-nobre">Rn</td>
+            </tr>
+            <tr>
+                <td class="alcalino">Fr</td><td class="alcalino-terroso">Ra</td><td class="transicao">Ac</td><td class="transicao">Rf</td><td class="transicao">Db</td><td class="transicao">Sg</td><td class="transicao">Bh</td><td class="transicao">Hs</td><td class="transicao">Mt</td><td class="transicao">Ds</td><td class="transicao">Rg</td><td class="transicao">Cn</td><td class="metal-pobre">Nh</td><td class="metal-pobre">Fl</td><td class="metal-pobre">Mc</td><td class="metal-pobre">Lv</td><td class="halogenio">Ts</td><td class="gas-nobre">Og</td>
+            </tr>
+            <tr>
+              <td colspan="18"></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td><td title="lantanideo">Ce</td><td title="lantanideo">Pr</td><td title="lantanideo">Nd</td><td title="lantanideo">Pm</td><td title="lantanideo">Sm</td><td title="lantanideo">Eu</td><td title="lantanideo">Gd</td><td title="lantanideo">Tb</td><td title="lantanideo">Dy</td><td title="lantanideo">Ho</td><td title="lantanideo">Er</td><td title="lantanideo">Tm</td><td title="lantanideo">Yb</td><td title="lantanideo">Lu</td><td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td><td title="actinideo">Th</td><td title="actinideo">Pa</td><td title="actinideo">U</td><td title="actinideo">Np</td><td title="actinideo">Pu</td><td title="actinideo">Am</td><td title="actinideo">Cm</td><td title="actinideo">Bk</td><td title="actinideo">Cf</td><td title="actinideo">Es</td><td title="actinideo">Fm</td><td title="actinideo">Md</td><td title="actinideo">No</td><td title="actinideo">Lr</td><td colspan="2"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Fonte: Dados fictícios. Cores e organização simplificadas para exemplo.</p>
+
+</body>
+</html>
