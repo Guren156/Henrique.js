@@ -1,0 +1,66 @@
+/* Estilos CSS para a tabela e elementos */
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    min-width: 40px;
+}
+
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #f0f0f0;
+}
+
+/* Estilos específicos para categorias (exemplo) */
+.alcalino {
+    background-color: #f0adad;
+}
+
+.alcalino-terroso {
+    background-color: #f4d03f;
+}
+
+.transicao {
+    background-color: #aad1f0;
+}
+
+.halogenio {
+    background-color: #a0f0a0;
+}
+
+.gas-nobre {
+    background-color: #e0e0e0;
+}
+
+/* ... mais estilos para outras categorias */
+
+/* Exemplo de estilo com seletor de atributo */
+[title="lantanideo"] {
+    border: 2px solid red;
+}
+
+/* Ids para elementos específicos (se necessário) */
+#H {
+    background-color: #ffffff;
+}
+
+#C {
+    background-color: #98ff98;
+}
+
+/* ... */
+
+/* Estilo usando pseudo-classe (exemplo:hover) */
+td:hover {
+    background-color: #ffff99;
+}
+
