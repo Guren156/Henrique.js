@@ -3,50 +3,36 @@
  body {
     font-family: sans-serif;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
-    margin: 20px;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
  }
 
- .linha1,
- .linha2,
- .linha3,
- .linha4,
- .linha5,
- .linha6,
- .linha7,
- .linha8,
- .linha9 {
-    display: flex;
+ .table-container {
+    display: grid;
+    grid-template-columns: repeat(18, 70px); /* 18 columns */
+    grid-auto-rows: 70px;
     gap: 5px;
-    margin-bottom: 5px;
  }
 
- .elemento {
+ .row {
+    display: contents; /* Allows row's children to participate in the grid */
+ }
+
+ .element {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70px;
-    height: 70px;
     border: 1px solid #ccc;
     background-color: #fff;
     text-align: center;
     position: relative;
  }
 
- .elemento h1 {
-    font-size: 1.5em;
-    margin: 5px 0;
- }
-
- .elemento h2 {
-    font-size: 0.8em;
-    margin: 0;
- }
-
- .atomico {
+ .atomic-number {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -54,102 +40,74 @@
     color: #555;
  }
 
- /* Corrected class names */
- .elemento-1 {
-    background-color: #f0f0f0;
-    /* Não metal */
+ .atomic-mass {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.7em;
+    color: #555;
  }
 
- .elemento-2 {
-    background-color: #e0ffff;
-    /* Gás nobre */
- }
-
- .elemento-3 {
+ /* Group colors */
+ .alkali-metal {
     background-color: #f0adad;
-    /* Alcalino */
  }
 
- .elemento-4 {
+ .alkaline-earth {
     background-color: #f4d03f;
-    /* Alcalino-terroso */
  }
 
- .elemento-5 {
-    background-color: #e6e6fa;
-    /* Semi-metal */
- }
-
- .elemento-6,
- .elemento-7,
- .elemento-8 {
-    background-color: #f0f0f0;
-    /* Não metal */
- }
-
- .elemento-9 {
-    background-color: #a0f0a0;
-    /* Halogênio */
- }
-
- .elemento-10 {
-    background-color: #e0ffff;
-    /* Gás nobre */
- }
-
- .linha3 .elemento-8 {
-    background-color: #e0ffff;
-    /* Gás nobre */
- }
-
- .linha3 .elemento:nth-child(1) {
-    background-color: #f0adad;
-    /* Alcalino */
- }
-
- .linha3 .elemento:nth-child(2) {
-    background-color: #f4d03f;
-    /* Alcalino-terroso */
- }
-
- .linha3 .elemento:nth-child(3) {
-    background-color: #98ff98;
-    /* Metal pobre */
- }
-
- .linha3 .elemento:nth-child(4) {
-    background-color: #e6e6fa;
-    /* Semi-metal */
- }
-
- .linha3 .elemento:nth-child(5),
- .linha3 .elemento:nth-child(6) {
-    background-color: #f0f0f0;
-    /* Não metal */
- }
-
- .linha3 .elemento:nth-child(7) {
-    background-color: #a0f0a0;
-    /* Halogênio */
- }
-
- .linha4 .elemento:nth-child(1) {
-    background-color: #f0adad;
-    /* Alcalino */
- }
-
- .linha4 .elemento:nth-child(2) {
-    background-color: #f4d03f;
-    /* Alcalino-terroso */
- }
-
- .linha4 .elemento:nth-child(n + 3):nth-child(-n + 12) {
+ .transition-metal {
     background-color: #aad1f0;
-    /* Metal de transição */
  }
 
- /* Espaços vazios */
- .elemento:empty {
+ .post-transition-metal {
+    background-color: #98ff98;
+ }
+
+ .metalloid {
+    background-color: #e6e6fa;
+ }
+
+ .nonmetal {
+    background-color: #f0f0f0;
+ }
+
+ .halogen {
+    background-color: #a0f0a0;
+ }
+
+ .noble-gas {
+    background-color: #e0ffff;
+ }
+
+ /* Example positioning (you'll need to be precise) */
+ .col-1 {
+    grid-column: 1;
+ }
+
+ .col-2 {
+    grid-column: 2;
+ }
+
+ .col-3 {
+    grid-column: 3;
+ }
+
+ /* ... more column definitions up to col-18 ... */
+
+ .row-1 {
+    grid-row: 1;
+ }
+
+ .row-2 {
+    grid-row: 2;
+ }
+
+ /* ... more row definitions up to row-7 ... */
+
+ /* Empty cells */
+ .element:empty {
     background-color: transparent;
     border: none;
  }
