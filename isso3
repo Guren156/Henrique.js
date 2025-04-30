@@ -1,21 +1,29 @@
-/* style.css */
+ /* style.css */
 
-body {
+ body {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #f4f4f4;
     margin: 20px;
-}
+ }
 
-.linha1, .linha2, .linha3, .linha4, .linha5, .linha6, .linha7, .linha8, .linha9 {
+ .linha1,
+ .linha2,
+ .linha3,
+ .linha4,
+ .linha5,
+ .linha6,
+ .linha7,
+ .linha8,
+ .linha9 {
     display: flex;
     gap: 5px;
     margin-bottom: 5px;
-}
+ }
 
-.elemento {
+ .elemento {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,113 +34,122 @@ body {
     background-color: #fff;
     text-align: center;
     position: relative;
-}
+ }
 
-.elemento h1 {
+ .elemento h1 {
     font-size: 1.5em;
     margin: 5px 0;
-}
+ }
 
-.elemento h2 {
+ .elemento h2 {
     font-size: 0.8em;
     margin: 0;
-}
+ }
 
-.atomico {
+ .atomico {
     position: absolute;
     top: 5px;
     left: 5px;
     font-size: 0.7em;
     color: #555;
-}
+ }
 
-/* Cores dos grupos (simplificado) */
-.linha1 .elemento:nth-child(1) { /* H */
-    background-color: #f0f0f0; /* Não metal */
-}
+ /* Corrected class names */
+ .elemento-1 {
+    background-color: #f0f0f0;
+    /* Não metal */
+ }
 
-.linha1 .elemento:nth-child(2) { /* He */
-    background-color: #e0ffff; /* Gás nobre */
-}
+ .elemento-2 {
+    background-color: #e0ffff;
+    /* Gás nobre */
+ }
 
-.linha2 .elemento:nth-child(1) { /* Li */
-    background-color: #f0adad; /* Alcalino */
-}
+ .elemento-3 {
+    background-color: #f0adad;
+    /* Alcalino */
+ }
 
-.linha2 .elemento:nth-child(2) { /* Be */
-    background-color: #f4d03f; /* Alcalino-terroso */
-}
+ .elemento-4 {
+    background-color: #f4d03f;
+    /* Alcalino-terroso */
+ }
 
-.elemento.elemento-5 { /* B */
-    background-color: #e6e6fa; /* Semi-metal */
-}
+ .elemento-5 {
+    background-color: #e6e6fa;
+    /* Semi-metal */
+ }
 
-.elemento.elemento-6 { /* C */
-    background-color: #f0f0f0; /* Não metal */
-}
+ .elemento-6,
+ .elemento-7,
+ .elemento-8 {
+    background-color: #f0f0f0;
+    /* Não metal */
+ }
 
-.elemento.elemento-7 { /* N */
-    background-color: #f0f0f0; /* Não metal */
-}
+ .elemento-9 {
+    background-color: #a0f0a0;
+    /* Halogênio */
+ }
 
-.elemento.elemento-8 { /* O */
-    background-color: #f0f0f0; /* Não metal */
-}
+ .elemento-10 {
+    background-color: #e0ffff;
+    /* Gás nobre */
+ }
 
-.elemento.elemento-9 { /* F */
-    background-color: #a0f0a0; /* Halogênio */
-}
+ .linha3 .elemento-8 {
+    background-color: #e0ffff;
+    /* Gás nobre */
+ }
 
-.elemento.elemento-10 { /* Ne */
-    background-color: #e0ffff; /* Gás nobre */
-}
+ .linha3 .elemento:nth-child(1) {
+    background-color: #f0adad;
+    /* Alcalino */
+ }
 
-.linha3 .elemento-8 { /* Ar (corrigindo a seleção) */
-    background-color: #e0ffff; /* Gás nobre */
-}
+ .linha3 .elemento:nth-child(2) {
+    background-color: #f4d03f;
+    /* Alcalino-terroso */
+ }
 
-.linha3 .elemento:nth-child(1) { /* Na */
-    background-color: #f0adad; /* Alcalino */
-}
+ .linha3 .elemento:nth-child(3) {
+    background-color: #98ff98;
+    /* Metal pobre */
+ }
 
-.linha3 .elemento:nth-child(2) { /* Mg */
-    background-color: #f4d03f; /* Alcalino-terroso */
-}
+ .linha3 .elemento:nth-child(4) {
+    background-color: #e6e6fa;
+    /* Semi-metal */
+ }
 
-.linha3 .elemento:nth-child(3) { /* Al */
-    background-color: #98ff98; /* Metal pobre */
-}
+ .linha3 .elemento:nth-child(5),
+ .linha3 .elemento:nth-child(6) {
+    background-color: #f0f0f0;
+    /* Não metal */
+ }
 
-.linha3 .elemento:nth-child(4) { /* Si */
-    background-color: #e6e6fa; /* Semi-metal */
-}
+ .linha3 .elemento:nth-child(7) {
+    background-color: #a0f0a0;
+    /* Halogênio */
+ }
 
-.linha3 .elemento:nth-child(5) { /* P */
-    background-color: #f0f0f0; /* Não metal */
-}
+ .linha4 .elemento:nth-child(1) {
+    background-color: #f0adad;
+    /* Alcalino */
+ }
 
-.linha3 .elemento:nth-child(6) { /* S */
-    background-color: #f0f0f0; /* Não metal */
-}
+ .linha4 .elemento:nth-child(2) {
+    background-color: #f4d03f;
+    /* Alcalino-terroso */
+ }
 
-.linha3 .elemento:nth-child(7) { /* Cl */
-    background-color: #a0f0a0; /* Halogênio */
-}
+ .linha4 .elemento:nth-child(n + 3):nth-child(-n + 12) {
+    background-color: #aad1f0;
+    /* Metal de transição */
+ }
 
-.linha4 .elemento:nth-child(1) { /* K */
-    background-color: #f0adad; /* Alcalino */
-}
-
-.linha4 .elemento:nth-child(2) { /* Ca */
-    background-color: #f4d03f; /* Alcalino-terroso */
-}
-
-.linha4 .elemento:nth-child(n+3):nth-child(-n+12) { /* Sc a Zn */
-    background-color: #aad1f0; /* Metal de transição */
-}
-
-/* Espaços vazios */
-.elemento:empty {
+ /* Espaços vazios */
+ .elemento:empty {
     background-color: transparent;
     border: none;
-}
+ }
