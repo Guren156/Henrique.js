@@ -1,0 +1,114 @@
+npm create vite@latest meu-catalogo-produtos -- --template react
+
+cd meu-catalogo-produtos
+npm install
+
+// src/api/productService.js
+
+const PRODUCTS_KEY = 'products';
+
+// Dados iniciais caso não haja nada no localStorage
+const initialProducts = [
+  { id: 1, name: 'Notebook Gamer', description: 'Notebook de alta performance para jogos.', price: 7500.99 },
+  { id: 2, name: 'Mouse sem Fio', description: 'Mouse ergonômico com 6 botões.', price: 150.50 },
+  { id: 3, name: 'Teclado Mecânico', description: 'Teclado com switches blue e RGB.', price: 350.00 },
+];
+
+// Inicializa o serviço
+const initialize = () => {
+  if (!localStorage.getItem(PRODUCTS_KEY)) {
+    localStorage.setItem(PRODUCTS_KEY, JSON.stringify(initialProducts));
+  }
+};
+
+initialize();
+
+export const getProducts = () => {
+  const products = localStorage.getItem(PRODUCTS_KEY);
+  return products ? JSON.parse(products) : [];
+};
+
+export const addProduct = (product) => {
+  const products = getProducts();
+  const newProduct = {
+    ...product,
+    id: new Date().getTime(), // Gera um ID único baseado no tempo
+    price: parseFloat(product.price) // Garante que o preço é um número
+  };
+  const updatedProducts = [...products, newProduct];
+  localStorage.setItem(PRODUCTS_KEY, JSON.stringify(updatedProducts));
+  return newProduct;
+};
+
+export const deleteProduct = (productId) => {
+  let products = getProducts();
+  products = products.filter(p => p.id !== productId);
+  localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+};
+
+
+
+
+
+
+
+/* src/index.css */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
